@@ -60,7 +60,7 @@ document.getElementById("form").addEventListener("submit", (e)=>{
                     let pos3Val = cells[pattern[2]].innerText;
                     
                     if(pos1Val !== "" && pos1Val == pos2Val && pos2Val == pos3Val){
-                        message.innerText = `${currentPlayer.id} congratulations you won!`
+                        message.innerText = `${currentPlayer} congratulations you won!`
                         gameOver = true;
                         cells[pattern[0]].style.backgroundColor = "#FFD700";
                         cells[pattern[1]].style.backgroundColor = "#FFD700";

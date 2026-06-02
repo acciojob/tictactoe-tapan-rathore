@@ -9,7 +9,7 @@ document.getElementById("form").addEventListener("submit", (e)=>{
             document.querySelector(".game").style.display = "block"
 
             let currentPlayer = player_1.value;
-            let currentTurn = "X"
+            let currentTurn = "x"
             let gameOver = false;
 
             const message = document.querySelector(".message");
@@ -17,7 +17,7 @@ document.getElementById("form").addEventListener("submit", (e)=>{
 
             function switchPlayer(){
                 currentPlayer = currentPlayer === player_1.value ? player_2.value :player_1.value;
-                currentTurn = currentTurn === "X" ? "O" : "X"
+                currentTurn = currentTurn === "x" ? "o" : "x"
                 message.innerText = `${currentPlayer}, you're up`;
             }
 
@@ -60,7 +60,7 @@ document.getElementById("form").addEventListener("submit", (e)=>{
                     let pos3Val = cells[pattern[2]].innerText;
                     
                     if(pos1Val !== "" && pos1Val == pos2Val && pos2Val == pos3Val){
-                        message.innerText = `${currentPlayer} congratulations you won!`
+                        message.innerText = `${currentPlayer.id} congratulations you won!`
                         gameOver = true;
                         cells[pattern[0]].style.backgroundColor = "#FFD700";
                         cells[pattern[1]].style.backgroundColor = "#FFD700";
@@ -89,7 +89,7 @@ document.getElementById("form").addEventListener("submit", (e)=>{
                     cell.style.backgroundColor="#2FA084"
                 }
                 currentPlayer = player_1.value;
-                currentTurn = "X"
+                currentTurn = "x"
                 gameOver = false;
                 message.innerText = `${currentPlayer}, you're up`
             }

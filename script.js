@@ -2,8 +2,8 @@
 document.getElementById("form").addEventListener("submit", (e)=>{
             e.preventDefault()
             
-            let player_1 = document.getElementById("player-1");
-            let player_2 = document.getElementById("player-2");
+            let player_1 = document.getElementById("player1");
+            let player_2 = document.getElementById("player2");
 
             document.getElementById("form").style.display = "none";
             document.querySelector(".game").style.display = "block"
@@ -60,7 +60,7 @@ document.getElementById("form").addEventListener("submit", (e)=>{
                     let pos3Val = cells[pattern[2]].innerText;
                     
                     if(pos1Val !== "" && pos1Val == pos2Val && pos2Val == pos3Val){
-                        message.innerText = `${currentPlayer} wins! 🎉`
+                        message.innerText = `${currentPlayer} congratulations you won!`
                         gameOver = true;
                         cells[pattern[0]].style.backgroundColor = "#FFD700";
                         cells[pattern[1]].style.backgroundColor = "#FFD700";
